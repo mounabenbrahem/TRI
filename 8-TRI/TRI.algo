@@ -1,0 +1,19 @@
+FUNCTION insertionSort(VAR ARR: ARRAY_OF INTEGER[]) : ARR: ARRAY_OF INTEGER
+VAR
+i,j,key: INTEGER;
+BEGIN 
+FOR i FROM 1 TO ARR.length-1 STEP 1  DO   
+key := ARR[i];  
+j := i - 1;  
+WHILE (j >= 0 and arr[j] > key) DO
+ARR[j + 1] = ARR[j];  
+j := j - 1; 
+END_WHILE 
+ARR[j + 1] = key; 
+END_FOR 
+RETURN (ARR) ;
+END
+
+
+
+
